@@ -1,0 +1,84 @@
+<div class="sidebar">
+    <hr class="visible-xs" />
+    <img class="avatar" src="/assets/img/mkgll_avatar_2019-03-07.jpg" alt="mkgll avatar" />
+    <p>I write, research and invest. This is my blog. <!--<a href="{{ '/about' | relative_url }}">About.</a> <a href="{{ '/site' | relative_url }}">Site.</a> <a href="{{ '/blogroll' | relative_url }}">Blogroll.</a>--></p>
+    <div class="external-links">
+      <p>
+        <span class="context">twitter</span>
+        <a href="https://twitter.com/_mkgll">@_mkgll</a>
+      </p>
+      <p>
+        <span class="context">github</span>
+        <a href="https://github.com/mkgll">mkgll</a>
+      </p>
+      
+      <p>
+        <span class="context">email</span>
+        <a href="mailto:hello@mkgll.ch">hello@mkgll.ch</a>
+      </p>
+
+    </div>
+    
+  <div class="welovecodinghorror" style="margin-bottom:15px;background: #f2e0b0;padding: 5px;margin-left: -5px;margin-right: -5px;"> 
+[ad] Enjoy my work? Subscribing on <b><a href="https://www.amazon.com/dp/B008HUMTO0/?tag=codihorr-20">Patreon</a></b> or sending some <b><a href="https://www.amazon.com/dp/B00BU3KPQU/?tag=codihorr-20">Bitcoin</a></b> helps me know best what you want more of!
+</div>
+    
+     {% if page.url != '/' %}
+    <h3>Recent Posts</h3>
+    {% for post in site.posts limit: 3 %}
+    <div class="post-sidebar">
+      {{ post.date | date: "%Y-%m-%d" }}<br />
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </div>
+    {% endfor %}
+    {% endif %}
+    
+  <!--    {% if page.url != '/' %}
+    <h3>Recent Notes</h3>
+    {% assign notes = site.notes | sort: 'date' | reverse %}
+{% for notes in notes limit:4  %}
+   <div class="post-sidebar">
+      <a href="{{ notes.url | prepend: site.baseurl }}">{{ notes.date }}</a>
+  </div>
+{% endfor %}
+      {% endif %} -->
+
+    
+   <!--  <h3>Consulting</h3>
+    <p>
+      <a href="https://sourcehut.org/consultancy/">Click here</a> to learn
+      about my consulting services.
+    </p>
+   <!-- <h3>Donate</h3>
+    <p>
+      <a href="/backers">Click here</a> for information about donating to
+      support my work.
+    </p>
+        <!--<h3>Privacy Book</h3>
+    <p>
+      Check out
+      <a href="https://wayland-book.com">Digital Privacy</a>.
+    </p>    -->
+   <!-- <h3>Make your own blog!</h3>
+    <!--
+    <p>
+      Make your own blog and write your first article and
+      <a href="/make-a-blog">I'll give you $20</a>.
+    </p>
+    -->
+  <!--  <p>
+      I offered a reward for readers to start their own blogs,
+      <a href="/make-a-blog">read about them here</a>.
+    </p><!--
+    <h3>License</h3>
+    <p style="font-size: 10pt">
+    The content for this site is
+    <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>.
+    The <a href="https://git.sr.ht/~sircmpwn/drewdevault.com">code</a> for this site is
+    <a href="https://opensource.org/licenses/MIT">MIT</a>.
+    </p>
+    <small class="text-muted">Have you seen <a href="https://sourcehut.org">sourcehut</a>?</small> -->
+    <div class="spacer" style="margin-top: 50px;"></div>
+</div>
+
+  
